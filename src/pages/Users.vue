@@ -31,6 +31,7 @@
       <div class="container">
         <div class="button-list">
           <div class="btn btnPrimary" @click="prevPage">&#171;</div>
+           <div class="counter"> {{this.page.current}} </div>
           <div class="btn btnPrimary" @click="nextPage">&#187;</div>
         </div>  
       </div>
@@ -107,12 +108,18 @@ img {
 
 .button-list {
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   .btn { 
     border-radius: 60px;
     margin: 0 20px;
   }
+}
+
+.counter {
+  padding: 10px 0;
+  margin: 0 10px;
 }
 </style>
 
